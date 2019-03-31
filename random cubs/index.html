@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body>
+    <script>
+        let field = document.createElement('div');
+        document.body.appendChild(field);
+        field.classList.add('field');
+        
+        
+        let color = ['red', 'green', 'blue','yellow','brown', 'orange', 'black'];
+        let random = Math.floor(Math.random()*90+10)
+        console.log(random)
+        
+        for (let i = 0; i < random; i++) { 
+            let q = document.createElement('div');
+            field.appendChild(q);
+            q.style.cssText = `width: 100px; 
+                            height: 100px; 
+                            background: ${color[Math.floor(Math.random()*7)]};
+                            float: left`;
+        }
+    </script>
+</body>
+</html>
